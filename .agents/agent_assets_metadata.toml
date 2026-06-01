@@ -6,3 +6,9 @@ id = "EfahPskay1kkGwHwNO6fr"
 uri = "file://portfolio-site.tar.gz"
 type = "unspecified"
 title = "Portfolio — Ready to Deploy (tar.gz)"
+
+[[outputs]]
+id = "YKBuIJd6FY6FdfzIYvTST"
+uri = "file://portfolio-github-pages.tar.gz"
+type = "unspecified"
+title = "Portfolio — GitHub Pages Fixed (tar.gz)"
