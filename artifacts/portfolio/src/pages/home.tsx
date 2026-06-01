@@ -72,7 +72,7 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-full border-2 border-accent/30 translate-x-4 translate-y-4"></div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-accent/20 to-transparent"></div>
                 <img 
-                  src="/profile.jpeg" 
+                  src={`${import.meta.env.BASE_URL}profile.jpeg`} 
                   alt="Faisal Balubead" 
                   className="absolute inset-0 w-full h-full object-cover rounded-full shadow-2xl z-10 border-4 border-background"
                 />
