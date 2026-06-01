@@ -183,6 +183,33 @@ export default function Home() {
                 </div>
               </motion.div>
 
+              {/* Smart Methods */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+              >
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-secondary text-secondary-foreground shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10 ml-0 md:ml-0">
+                  <Code2 size={16} />
+                </div>
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card/50 border border-border p-6 rounded-xl ml-4 md:ml-0">
+                  <div className="flex flex-col mb-4">
+                    <h3 className="font-bold text-xl text-primary dark:text-foreground">Web Developer</h3>
+                    <span className="text-muted-foreground font-medium mt-1">Smart Methods — Summer Training, Jeddah</span>
+                    <span className="text-sm text-muted-foreground flex items-center gap-1 mt-2">
+                      <Calendar size={14} /> July 2023 – Aug 2023
+                    </span>
+                  </div>
+                  <ul className="space-y-2 text-sm text-card-foreground/80 list-disc pl-4 marker:text-muted-foreground/50">
+                    <li>Designed and developed a robot control panel using front-end technologies.</li>
+                    <li>Integrated NLP basics with APIs to build a text-to-speech system, demonstrating understanding of system integration.</li>
+                    <li>Collaborated with multi-disciplinary teams to test and run robotic hardware.</li>
+                  </ul>
+                </div>
+              </motion.div>
+
             </div>
           </div>
         </section>
