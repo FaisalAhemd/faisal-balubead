@@ -224,7 +224,7 @@ export default function Home() {
               variants={fadeInUp}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-primary dark:text-foreground">Technical Arsenal</h2>
+              <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-primary dark:text-foreground">Technical Skills</h2>
               <div className="h-1 w-12 bg-accent mx-auto rounded-full mb-6"></div>
               <p className="text-muted-foreground max-w-2xl mx-auto">Core competencies across data analysis, systems architecture, and business intelligence.</p>
             </motion.div>
