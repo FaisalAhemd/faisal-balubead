@@ -283,44 +283,54 @@ export default function Home() {
             </div>
 
             {/* Graduation Project */}
-            <motion.div
+            <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
-              className="bg-card border border-border rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-accent/30 transition-all"
+              className="grid md:grid-cols-5 gap-0 rounded-2xl overflow-hidden shadow-xl border border-border bg-card"
             >
-              <div className="bg-primary dark:bg-muted p-6 flex items-center gap-3 text-primary-foreground dark:text-foreground relative overflow-hidden">
-                <div className="absolute right-6 opacity-10">
-                  <SiMysql size={64} />
-                </div>
-                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
-                  <Code2 size={20} />
+              <div className="md:col-span-2 bg-primary dark:bg-muted p-8 md:p-12 flex flex-col justify-center text-primary-foreground dark:text-foreground relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-8 opacity-10">
+                  <SiMysql size={120} />
                 </div>
                 <div className="relative z-10">
-                  <div className="text-xs text-accent font-bold tracking-widest uppercase mb-1">Graduation Project</div>
-                  <h3 className="font-bold text-lg leading-tight">Surgical Operations Management System (SOMS)</h3>
+                  <div className="text-accent text-sm font-bold tracking-widest uppercase mb-2">Graduation Project</div>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">Surgical Operations Management System (SOMS)</h3>
+                  <div className="flex flex-wrap gap-2 mt-6">
+                    <span className="px-3 py-1 bg-white/10 dark:bg-background/50 rounded-full text-xs">PHP</span>
+                    <span className="px-3 py-1 bg-white/10 dark:bg-background/50 rounded-full text-xs">Python</span>
+                    <span className="px-3 py-1 bg-white/10 dark:bg-background/50 rounded-full text-xs">SQL</span>
+                    <span className="px-3 py-1 bg-white/10 dark:bg-background/50 rounded-full text-xs">UML</span>
+                  </div>
                 </div>
               </div>
-              <div className="p-6">
-                <ul className="space-y-3 text-sm text-card-foreground/80">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></span>
-                    Conducted full lifecycle analysis including Functional/Non-Functional requirements and UML design (Class & Sequence diagrams).
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></span>
-                    Built a robust full-stack system using PHP, Python, HTML, CSS, and JavaScript with strict Role-Based Access Control (RBAC).
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></span>
-                    Designed a Relational SQL Database and an integrated dashboard providing dynamic charts for deep operational insights.
-                  </li>
-                </ul>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {["PHP", "Python", "SQL", "UML", "RBAC"].map(tag => (
-                    <span key={tag} className="px-2.5 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">{tag}</span>
-                  ))}
+              <div className="md:col-span-3 p-8 md:p-12">
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-bold text-primary dark:text-foreground flex items-center gap-2 mb-2">
+                      <div className="w-8 h-px bg-accent"></div> Systems Analysis
+                    </h4>
+                    <p className="text-card-foreground/80 text-sm md:text-base leading-relaxed">
+                      Conducted full lifecycle analysis, including Functional/Non-Functional requirements and UML design (Class & Sequence diagrams).
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-primary dark:text-foreground flex items-center gap-2 mb-2">
+                      <div className="w-8 h-px bg-accent"></div> Full-Stack Development
+                    </h4>
+                    <p className="text-card-foreground/80 text-sm md:text-base leading-relaxed">
+                      Built a robust system using PHP, Python, HTML, CSS, and JavaScript implementing strict Role-Based Access Control (RBAC) for security.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-primary dark:text-foreground flex items-center gap-2 mb-2">
+                      <div className="w-8 h-px bg-accent"></div> Data & BI
+                    </h4>
+                    <p className="text-card-foreground/80 text-sm md:text-base leading-relaxed">
+                      Designed a Relational SQL Database and developed an integrated Dashboard providing dynamic charts for deep operational insights.
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
