@@ -527,7 +527,7 @@ export default function Home() {
                 </a>
 
                 <a 
-                  href="https://linkedin.com/in/faisal-balubead" 
+                  href="https://www.linkedin.com/in/faisal-balubead-3b30b4217" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm uppercase tracking-widest hover:text-accent transition-colors"
