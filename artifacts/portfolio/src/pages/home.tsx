@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Navbar } from "@/components/navbar"
-import { Mail, Phone, Linkedin, ArrowRight, ExternalLink, Calendar, MapPin, Briefcase, BarChart2, Table2, Code2, Database } from "lucide-react"
+import { Mail, Phone, Linkedin, ArrowRight, ExternalLink, Calendar, MapPin, Briefcase, BarChart2, Code2, Download, Shield, Database } from "lucide-react"
 import { SiPython, SiMysql } from "react-icons/si"
 
 // Animation variants
@@ -46,10 +46,10 @@ export default function Home() {
               </motion.h1>
               <motion.div variants={fadeInUp} className="h-1 w-20 bg-accent mb-6 rounded-full"></motion.div>
               <motion.h2 variants={fadeInUp} className="text-xl md:text-2xl font-light text-muted-foreground mb-8">
-                Data Analyst & IT Project Coordinator
+                Service Delivery Officer & BI Analyst
               </motion.h2>
               <motion.p variants={fadeInUp} className="text-base md:text-lg text-foreground/80 max-w-lg mb-10 leading-relaxed">
-                Bridging the gap between raw data and actionable IT strategy. I turn complex datasets into decision-support insights and optimize technical workflows.
+                Bridging the gap between Business Intelligence, Data Analytics, and IT Service Management. Delivering decision-support insights and optimizing enterprise workflows across government and corporate sectors.
               </motion.p>
               
               <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
@@ -58,6 +58,13 @@ export default function Home() {
                 </a>
                 <a href="#projects" className="px-8 py-3.5 bg-secondary text-secondary-foreground font-medium rounded-md hover:bg-secondary/80 transition-colors">
                   View Work
+                </a>
+                <a 
+                  href={`${import.meta.env.BASE_URL}Faisal-Balubead-CV.pdf`}
+                  download="Faisal-Balubead-CV.pdf"
+                  className="px-8 py-3.5 border border-accent/40 text-accent font-medium rounded-md hover:bg-accent/10 transition-colors flex items-center gap-2"
+                >
+                  <Download size={18} /> Resume
                 </a>
               </motion.div>
             </motion.div>
@@ -104,7 +111,7 @@ export default function Home() {
             >
               <div className="absolute top-0 left-0 w-1 h-full bg-accent"></div>
               <p className="text-lg md:text-xl leading-relaxed text-card-foreground/90 font-light">
-                <strong className="font-semibold text-primary dark:text-foreground">Results-driven Computer Science graduate</strong> bridging the gap between Data Analytics and IT Project Coordination. Experienced in leveraging <strong className="text-accent">Power BI, SQL, and Python</strong> to deliver decision-support insights, while optimizing IT service operations (ITSM) and automating workflows to drive efficiency across both government and corporate tech sectors.
+                <strong className="font-semibold text-primary dark:text-foreground">Results-driven Computer Science graduate</strong> bridging the gap between Business Intelligence, Data Analytics, and IT Service Management (ITSM). Experienced in leveraging <strong className="text-accent">Power BI, SQL, and Data Governance</strong> principles to deliver decision-support insights, while optimizing IT service operations and streamlining enterprise workflows to drive efficiency across government and enterprise sectors.
               </p>
             </motion.div>
           </div>
@@ -139,18 +146,18 @@ export default function Home() {
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card border border-border p-6 rounded-xl shadow-sm ml-4 md:ml-0">
                   <div className="flex flex-col mb-4">
-                    <h3 className="font-bold text-xl text-primary dark:text-foreground">Data Analyst & IT Project Coordinator</h3>
+                    <h3 className="font-bold text-xl text-primary dark:text-foreground">Service Delivery Officer (Tamheer)</h3>
                     <span className="text-accent font-medium mt-1">Perfect Presentation (2P)</span>
                     <span className="text-sm text-muted-foreground flex items-center gap-1 mt-2">
-                      <Calendar size={14} /> Feb 2026 – Aug 2026
+                      <Calendar size={14} /> Feb 2026 – Present
                     </span>
                   </div>
                   <ul className="space-y-2 text-sm text-card-foreground/80 list-disc pl-4 marker:text-accent/50">
-                    <li>Analyzed ITSM system data to evaluate operational performance and monitor KPIs.</li>
-                    <li>Coordinated enterprise hardware exchange, managing asset lifecycle data and employee handovers.</li>
-                    <li>Automated asset tracking workflow, minimizing data entry errors and enhancing operational efficiency.</li>
-                    <li>Generated performance reports delivering actionable insights regarding ticket volumes.</li>
-                    <li>Transitioned to support technical project management, bridging IT coordination and data analysis.</li>
+                    <li>Evaluated operational ITSM metrics across Incidents, Service Requests, and Change Requests, building executive Power BI dashboards to monitor KPIs and uphold 98%+ SLA compliance.</li>
+                    <li>Led the discovery, auditing, and reconciliation of 1,000+ IT assets, constructing a structured CMDB across enterprise client projects.</li>
+                    <li>Digitalized asset tracking procedures, improving data accuracy by 35% and reducing device lifecycle processing time by 20%.</li>
+                    <li>Coordinated hardware exchange initiatives for over 300 users, overseeing allocation and documentation for seamless deployment.</li>
+                    <li>Prepared weekly and monthly service delivery reports for senior leadership, delivering predictive insights that reduced average resolution time by 15%.</li>
                   </ul>
                 </div>
               </motion.div>
@@ -168,44 +175,16 @@ export default function Home() {
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card/50 border border-border p-6 rounded-xl ml-4 md:ml-0">
                   <div className="flex flex-col mb-4">
-                    <h3 className="font-bold text-xl text-primary dark:text-foreground">Data Analyst</h3>
+                    <h3 className="font-bold text-xl text-primary dark:text-foreground">Data Analyst (Project Contract)</h3>
                     <span className="text-muted-foreground font-medium mt-1">Madinah Development Authority</span>
                     <span className="text-sm text-muted-foreground flex items-center gap-1 mt-2">
                       <Calendar size={14} /> Jan 2025 – Jan 2026
                     </span>
                   </div>
                   <ul className="space-y-2 text-sm text-card-foreground/80 list-disc pl-4 marker:text-muted-foreground/50">
-                    <li>Contributed to a confidential government project focusing on data analysis, risk assessment, and decision-support reporting.</li>
-                    <li>Analyzed complex datasets to identify trends supporting informed decision-making.</li>
-                    <li>Developed interactive reports and visualizations to communicate technical findings.</li>
-                    <li>Maintained high standards of data governance and confidentiality.</li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              {/* Smart Methods */}
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-                className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
-              >
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-background bg-secondary text-secondary-foreground shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10 ml-0 md:ml-0">
-                  <Code2 size={16} />
-                </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card/50 border border-border p-6 rounded-xl ml-4 md:ml-0">
-                  <div className="flex flex-col mb-4">
-                    <h3 className="font-bold text-xl text-primary dark:text-foreground">Web Developer</h3>
-                    <span className="text-muted-foreground font-medium mt-1">Smart Methods — Summer Training, Jeddah</span>
-                    <span className="text-sm text-muted-foreground flex items-center gap-1 mt-2">
-                      <Calendar size={14} /> July 2023 – Aug 2023
-                    </span>
-                  </div>
-                  <ul className="space-y-2 text-sm text-card-foreground/80 list-disc pl-4 marker:text-muted-foreground/50">
-                    <li>Designed and developed a robot control panel using front-end technologies.</li>
-                    <li>Integrated NLP basics with APIs to build a text-to-speech system, demonstrating understanding of system integration.</li>
-                    <li>Collaborated with multi-disciplinary teams to test and run robotic hardware.</li>
+                    <li>Executed data analysis and risk assessment on complex datasets for a confidential government project, supporting executive decision-support reporting.</li>
+                    <li>Collaborated with cross-functional teams to define project objectives and system requirements, aligning technical capabilities with core business needs.</li>
+                    <li>Engineered interactive Power BI dashboards and predictive analytics models to translate complex technical findings into actionable strategies for non-technical leadership.</li>
                   </ul>
                 </div>
               </motion.div>
@@ -214,85 +193,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SKILLS SECTION */}
-        <section id="skills" className="py-24 px-6 md:px-12 bg-secondary/30">
-          <div className="container mx-auto max-w-6xl">
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-primary dark:text-foreground">Technical Skills</h2>
-              <div className="h-1 w-12 bg-accent mx-auto rounded-full mb-6"></div>
-              <p className="text-muted-foreground max-w-2xl mx-auto">Core competencies across data analysis, systems architecture, and business intelligence.</p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  title: "Data & BI",
-                  skills: ["Power BI", "Microsoft Excel", "Tableau", "Data Cleaning"],
-                  icon: <BarChart2 className="text-accent text-3xl mb-4" size={32} />
-                },
-                {
-                  title: "Systems Analysis",
-                  skills: ["Requirement Gathering", "SDLC", "UML Modeling", "ITSM & Automation"],
-                  icon: <div className="text-accent text-3xl mb-4"><Briefcase size={32} /></div>
-                },
-                {
-                  title: "Programming",
-                  skills: ["Python (Data Libs)", "PHP", "JavaScript"],
-                  icon: <SiPython className="text-[#3776AB] text-3xl mb-4" />
-                },
-                {
-                  title: "Databases",
-                  skills: ["SQL", "Relational Databases", "Database Management", "Data Governance"],
-                  icon: <SiMysql className="text-[#4479A1] text-3xl mb-4" />
-                }
-              ].map((category, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeInUp}
-                  className="bg-card border border-border p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                >
-                  {category.icon}
-                  <h3 className="font-bold text-lg mb-4 text-primary dark:text-foreground">{category.title}</h3>
-                  <ul className="space-y-2">
-                    {category.skills.map((skill, sIdx) => (
-                      <li key={sIdx} className="text-sm text-card-foreground/80 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent/50"></span>
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Highlights Bar */}
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              className="mt-12 py-6 px-8 bg-primary dark:bg-card border dark:border-border rounded-xl flex flex-wrap justify-center gap-8 md:gap-16 text-primary-foreground dark:text-foreground shadow-lg"
-            >
-              {['Power BI', 'SQL', 'Excel', 'ITSM & Automation'].map((tool, idx) => (
-                <div key={idx} className="flex items-center gap-2 font-medium tracking-wide">
-                  <span className="text-accent text-xl">✦</span> {tool}
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* PROJECTS SECTION */}
-        <section id="projects" className="py-24 px-6 md:px-12">
+        {/* TECHNICAL PROJECTS SECTION */}
+        <section id="projects" className="py-24 px-6 md:px-12 bg-secondary/30">
           <div className="container mx-auto max-w-5xl">
             <motion.div 
               initial="hidden"
@@ -301,10 +203,86 @@ export default function Home() {
               variants={fadeInUp}
               className="mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-primary dark:text-foreground">Featured Project</h2>
-              <div className="h-1 w-12 bg-accent rounded-full"></div>
+              <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-primary dark:text-foreground">Technical Projects</h2>
+              <div className="h-1 w-12 bg-accent rounded-full mb-4"></div>
+              <p className="text-muted-foreground">Enterprise Managed IT Services — Perfect Presentation (2P)</p>
             </motion.div>
 
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {/* Taibah University */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                className="bg-card border border-border rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-accent/30 transition-all"
+              >
+                <div className="bg-primary dark:bg-muted p-6 flex items-center gap-3 text-primary-foreground dark:text-foreground">
+                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                    <Database size={20} />
+                  </div>
+                  <div>
+                    <div className="text-xs text-accent font-bold tracking-widest uppercase mb-1">University Project</div>
+                    <h3 className="font-bold text-lg leading-tight">Taibah University Managed IT Services</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm text-card-foreground/80">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></span>
+                      Spearheading end-to-end IT asset discovery and CMDB configuration for university-wide infrastructure, establishing automated Configuration Item (CI) relationships.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></span>
+                      Streamlined Incident, Change, and Request Management workflows, reducing operational friction across university IT operations.
+                    </li>
+                  </ul>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {["CMDB", "ITSM", "Asset Discovery", "Workflow Optimization"].map(tag => (
+                      <span key={tag} className="px-2.5 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Madinah Municipality */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                className="bg-card border border-border rounded-xl shadow-sm overflow-hidden hover:shadow-md hover:border-accent/30 transition-all"
+              >
+                <div className="bg-primary dark:bg-muted p-6 flex items-center gap-3 text-primary-foreground dark:text-foreground">
+                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                    <BarChart2 size={20} />
+                  </div>
+                  <div>
+                    <div className="text-xs text-accent font-bold tracking-widest uppercase mb-1">Government Project</div>
+                    <h3 className="font-bold text-lg leading-tight">Madinah Region Municipality IT Services</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 text-sm text-card-foreground/80">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></span>
+                      Managed hardware exchange and registration for municipal operations, enhancing allocation log accuracy by 25%.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></span>
+                      Analyzed service desk operational data to generate key performance metrics and sustain high SLA compliance standards.
+                    </li>
+                  </ul>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {["Asset Inventory", "Data Reconciliation", "SLA Analytics", "KPI Reporting"].map(tag => (
+                      <span key={tag} className="px-2.5 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Graduation Project */}
             <motion.div 
               initial="hidden"
               whileInView="visible"
@@ -359,6 +337,83 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SKILLS SECTION */}
+        <section id="skills" className="py-24 px-6 md:px-12">
+          <div className="container mx-auto max-w-6xl">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-primary dark:text-foreground">Technical Skills</h2>
+              <div className="h-1 w-12 bg-accent mx-auto rounded-full mb-6"></div>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Core competencies across ITSM, data analytics, business intelligence, and systems proficiency.</p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  title: "ITSM & Asset Management",
+                  skills: ["CMDB Configuration", "IT Asset Management (ITAM)", "Service Delivery", "Incident & Change Management", "ITIL 4 Framework", "SLA Monitoring"],
+                  icon: <Shield className="text-accent mb-4" size={32} />
+                },
+                {
+                  title: "Data Analytics & BI",
+                  skills: ["Power BI", "DAX & Power Query", "Data Modeling", "Predictive Analytics", "Data Governance", "Advanced Excel"],
+                  icon: <BarChart2 className="text-[#F2C811] mb-4" size={32} />
+                },
+                {
+                  title: "Systems & Technical",
+                  skills: ["Requirements Gathering", "SDLC", "Systems Thinking", "HTML/CSS", "JavaScript", "Python (Data Analysis)"],
+                  icon: <Code2 className="text-accent mb-4" size={32} />
+                },
+                {
+                  title: "Databases & Query",
+                  skills: ["SQL", "Relational Databases", "Database Management", "Data Governance"],
+                  icon: <SiMysql className="text-[#4479A1] mb-4" size={32} />
+                }
+              ].map((category, idx) => (
+                <motion.div 
+                  key={idx}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInUp}
+                  className="bg-card border border-border p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                >
+                  {category.icon}
+                  <h3 className="font-bold text-lg mb-4 text-primary dark:text-foreground">{category.title}</h3>
+                  <ul className="space-y-2">
+                    {category.skills.map((skill, sIdx) => (
+                      <li key={sIdx} className="text-sm text-card-foreground/80 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent/50"></span>
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Highlights Bar */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              className="mt-12 py-6 px-8 bg-primary dark:bg-card border dark:border-border rounded-xl flex flex-wrap justify-center gap-8 md:gap-16 text-primary-foreground dark:text-foreground shadow-lg"
+            >
+              {['Power BI', 'SQL', 'CMDB / ITAM', 'ITIL 4'].map((tool, idx) => (
+                <div key={idx} className="flex items-center gap-2 font-medium tracking-wide">
+                  <span className="text-accent text-xl">✦</span> {tool}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
         {/* EDUCATION & CERTIFICATIONS */}
         <section id="education" className="py-24 px-6 md:px-12 bg-secondary/30">
           <div className="container mx-auto max-w-5xl">
@@ -400,9 +455,9 @@ export default function Home() {
                 
                 <div className="space-y-4">
                   {[
-                    { name: "Microsoft Certified: Power BI Data Analyst Associate", org: "Microsoft", status: "In Progress" },
+                    { name: "ITIL® 4 Foundation (IT Service Management)", org: "Axelos", status: "In Progress" },
                     { name: "SQL for Business Analysis", org: "Udemy", status: "Completed" },
-                    { name: "Data Analysis using Power BI", org: "Twal Academy", status: "Completed" },
+                    { name: "Data Analysis using Power BI", org: "Tuwaiq Academy", status: "Completed" },
                     { name: "Angular Development", org: "Tuwaiq Academy", status: "Completed" }
                   ].map((cert, idx) => (
                     <div key={idx} className="bg-card border border-border p-5 rounded-xl flex items-center justify-between group hover:border-accent/50 transition-colors">
@@ -435,7 +490,7 @@ export default function Home() {
             >
               <h2 className="text-3xl md:text-5xl font-bold font-serif mb-6">Let's Connect</h2>
               <p className="text-primary-foreground/80 dark:text-foreground/80 text-lg mb-12 max-w-2xl mx-auto font-light">
-                Currently open to new opportunities in Data Analysis and IT Project Coordination. Whether you have a question or just want to say hi, my inbox is open.
+                Currently open to new opportunities in Business Intelligence, Data Analytics, and IT Service Management. Whether you have a question or just want to say hi, my inbox is open.
               </p>
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
@@ -463,6 +518,14 @@ export default function Home() {
               <div className="mt-16 pt-8 border-t border-white/10 dark:border-border flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="font-serif font-bold text-xl tracking-wider">FB<span className="text-accent">.</span></div>
                 
+                <a 
+                  href={`${import.meta.env.BASE_URL}Faisal-Balubead-CV.pdf`}
+                  download="Faisal-Balubead-CV.pdf"
+                  className="flex items-center gap-2 text-sm uppercase tracking-widest hover:text-accent transition-colors"
+                >
+                  <Download size={16} /> Download CV
+                </a>
+
                 <a 
                   href="https://linkedin.com/in/faisal-balubead" 
                   target="_blank" 
