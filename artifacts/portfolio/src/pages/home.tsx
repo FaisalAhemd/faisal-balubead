@@ -46,10 +46,10 @@ export default function Home() {
               </motion.h1>
               <motion.div variants={fadeInUp} className="h-1 w-20 bg-accent mb-6 rounded-full"></motion.div>
               <motion.h2 variants={fadeInUp} className="text-xl md:text-2xl font-light text-muted-foreground mb-8">
-                IT Service Management Specialist & BI Analyst
+                IT Service Management Specialist | Business Intelligence & Data Analyst
               </motion.h2>
               <motion.p variants={fadeInUp} className="text-base md:text-lg text-foreground/80 max-w-lg mb-10 leading-relaxed">
-                Bridging enterprise IT infrastructure and business intelligence — optimizing ITSM workflows, configuring CMDB, managing ITAM lifecycles, and delivering Power BI insights aligned with ITIL 4 frameworks.
+                Bridging technical infrastructure and business requirements through ITSM, Business Intelligence, and IT Operations. I optimize enterprise workflows, manage CMDB and ITAM lifecycles, and deliver Power BI insights aligned with ITIL 4 frameworks.
               </motion.p>
 
               <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
@@ -111,7 +111,7 @@ export default function Home() {
             >
               <div className="absolute top-0 left-0 w-1 h-full bg-accent"></div>
               <p className="text-lg md:text-xl leading-relaxed text-card-foreground/90 font-light">
-                <strong className="font-semibold text-primary dark:text-foreground">Results-driven Computer Science graduate</strong> with strong expertise in IT Service Management (ITSM), Business Intelligence (BI), and IT Operations. Proven track record in optimizing enterprise IT workflows, configuring <strong className="text-accent">Configuration Management Databases (CMDB)</strong>, and managing IT Asset Management (ITAM) lifecycles aligned with <strong className="text-accent">ITIL 4 frameworks</strong>. Skilled in leveraging Power BI, SQL, and data governance to monitor SLAs, automate KPI reporting, and deliver actionable insights for executive leadership.
+                <strong className="font-semibold text-primary dark:text-foreground">Results-driven Computer Science graduate</strong> with strong expertise in IT Service Management (ITSM), Business Intelligence (BI), and IT Operations. Proven track record in optimizing enterprise IT workflows, configuring <strong className="text-accent">Configuration Management Databases (CMDB)</strong>, and managing IT Asset Management (ITAM) lifecycles aligned with <strong className="text-accent">ITIL 4 frameworks</strong>. Skilled in leveraging Power BI, SQL, and data governance to monitor SLAs, automate KPI reporting, and deliver actionable insights for executive leadership. Adept at bridging technical infrastructure and business requirements to streamline incident, change, and asset management in major enterprise and government projects.
               </p>
             </motion.div>
           </div>
@@ -455,21 +455,34 @@ export default function Home() {
 
                 <div className="space-y-4">
                   {[
-                    { name: "ITIL® 4 Foundation — IT Service Management", org: "Axelos · Expected 2026", status: "In Progress" },
-                    { name: "Data Analysis Using Power BI", org: "Tuwaiq Academy", status: "Completed" },
-                    { name: "SQL for Business Analysis", org: "Udemy", status: "Completed" },
-                    { name: "Angular Development", org: "Tuwaiq Academy", status: "Completed" }
+                    { name: "ITIL® 4 Foundation — IT Service Management", org: "PeopleCert · September 2026", status: "Completed", url: "https://drive.google.com/file/d/1F1_YOt-6-wWCiDtihMsYlk6Zzs0SXEG7/view?usp=sharing" },
+                    { name: "Microsoft Certified: Windows Server Hybrid Administrator Associate (AZ-800, AZ-801)", org: "In Progress", status: "In Progress" },
+                    { name: "Data Analysis Using Power BI", org: "Tawal Academy · February 2026", status: "Completed" },
+                    { name: "SQL for Business Analysis", org: "Udemy · December 2025", status: "Completed" },
+                    { name: "Angular Development", org: "Tuwaiq Academy · July 2024", status: "Completed" }
                   ].map((cert, idx) => (
                     <div key={idx} className="bg-card border border-border p-5 rounded-xl flex items-center justify-between group hover:border-accent/50 transition-colors">
                       <div>
                         <h4 className="font-bold text-primary dark:text-foreground text-sm md:text-base">{cert.name}</h4>
                         <div className="text-sm text-muted-foreground mt-1">{cert.org}</div>
                       </div>
-                      {cert.status === "In Progress" ? (
-                        <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-md shrink-0 ml-4">In Progress</span>
-                      ) : (
-                        <div className="w-2 h-2 rounded-full bg-accent shrink-0 ml-4 opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                      )}
+                      <div className="flex items-center gap-3 shrink-0 ml-4">
+                        {cert.status === "In Progress" ? (
+                          <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-md">In Progress</span>
+                        ) : (
+                          <div className="w-2 h-2 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        )}
+                        {cert.url && (
+                          <a
+                            href={cert.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-medium text-accent hover:underline"
+                          >
+                            Preview certificate
+                          </a>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
