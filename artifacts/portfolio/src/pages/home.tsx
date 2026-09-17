@@ -24,7 +24,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-accent selection:text-accent-foreground">
       <Navbar />
 
-      <main>
+      <main data-build-release="it-specialist-cv-1.0">
         {/* HERO SECTION */}
         <section id="home" className="relative min-h-screen flex items-center pt-20 pb-12 px-6 md:px-12 lg:px-24">
           <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05]"
@@ -60,8 +60,8 @@ export default function Home() {
                   View Work
                 </a>
                 <a
-                  href={`${import.meta.env.BASE_URL}Faisal-Balubead-CV.pdf`}
-                  download="Faisal-Balubead-CV.pdf"
+                  href={`${import.meta.env.BASE_URL}Faisal-Balubead-CV-IT-Specialist-1.0.pdf`}
+                  download="Faisal-Balubead-CV-IT-Specialist-1.0.pdf"
                   className="px-8 py-3.5 border border-accent/40 text-accent font-medium rounded-md hover:bg-accent/10 transition-colors flex items-center gap-2"
                 >
                   <Download size={18} /> Resume
@@ -532,8 +532,8 @@ export default function Home() {
                 <div className="font-serif font-bold text-xl tracking-wider">FB<span className="text-accent">.</span></div>
 
                 <a
-                  href={`${import.meta.env.BASE_URL}Faisal-Balubead-CV.pdf`}
-                  download="Faisal-Balubead-CV.pdf"
+                  href={`${import.meta.env.BASE_URL}Faisal-Balubead-CV-IT-Specialist-1.0.pdf`}
+                  download="Faisal-Balubead-CV-IT-Specialist-1.0.pdf"
                   className="flex items-center gap-2 text-sm uppercase tracking-widest hover:text-accent transition-colors"
                 >
                   <Download size={16} /> Download CV
