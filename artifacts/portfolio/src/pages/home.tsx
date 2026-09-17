@@ -149,7 +149,7 @@ export default function Home() {
                     <h3 className="font-bold text-xl text-primary dark:text-foreground">Service Delivery Officer (Tamheer)</h3>
                     <span className="text-accent font-medium mt-1">Perfect Presentation (2P)</span>
                     <span className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
-                      <Calendar size={14} /> Feb 2026 – Present &nbsp;·&nbsp; Madinah, Saudi Arabia
+                      <Calendar size={14} /> Feb 2026 – Aug 2026 &nbsp;·&nbsp; Madinah, Saudi Arabia
                     </span>
                   </div>
                   <ul className="space-y-3 text-sm text-card-foreground/80">
@@ -477,7 +477,7 @@ export default function Home() {
                             href={cert.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs font-medium text-accent hover:underline"
+                            className="text-xs font-medium text-accent underline underline-offset-2 hover:opacity-80"
                           >
                             Preview certificate
                           </a>
