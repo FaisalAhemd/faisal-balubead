@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Navbar } from "@/components/navbar"
 import { Mail, Phone, Linkedin, ArrowRight, Calendar, Briefcase, BarChart2, Code2, Download, Shield, Database, Settings } from "lucide-react"
-import { translatePortfolioText, type PortfolioLanguage } from "@/lib/portfolio-translations"
 
 // Animation variants
 const fadeInUp = {
@@ -21,35 +19,13 @@ const staggerContainer = {
 }
 
 export default function Home() {
-  const [language, setLanguage] = useState<PortfolioLanguage>(() => {
-    if (typeof window === "undefined") return "en"
-    return window.localStorage.getItem("portfolio-language") === "ar" ? "ar" : "en"
-  })
-  const t = (text: string) => translatePortfolioText(text, language)
-
-  useEffect(() => {
-    document.documentElement.lang = language
-    document.documentElement.dir = language === "ar" ? "rtl" : "ltr"
-    window.localStorage.setItem("portfolio-language", language)
-    const title = language === "ar"
-      ? "فيصل بالعبيد — أخصائي عمليات تقنية المعلومات"
-      : "Faisal Balubead — IT Operations Portfolio"
-    const description = language === "ar"
-      ? "فيصل بالعبيد، أخصائي عمليات تقنية المعلومات والدعم الفني في المدينة المنورة. خبرة في دعم تقنية المعلومات والبنية التحتية وإدارة الخدمات."
-      : "Faisal Balubead — IT Operations Specialist and Technical Support professional in Madinah, Saudi Arabia. Experienced in IT support, infrastructure, and service operations."
-    document.title = title
-    document.querySelector('meta[name="description"]')?.setAttribute("content", description)
-    document.querySelector('meta[property="og:title"]')?.setAttribute("content", title)
-    document.querySelector('meta[property="og:description"]')?.setAttribute("content", description)
-    document.querySelector('meta[name="twitter:title"]')?.setAttribute("content", title)
-    document.querySelector('meta[name="twitter:description"]')?.setAttribute("content", description)
-  }, [language])
+  const t = (text: string) => text
 
   return (
-    <div dir={language === "ar" ? "rtl" : "ltr"} className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-accent selection:text-accent-foreground">
-      <Navbar language={language} onLanguageChange={() => setLanguage(language === "ar" ? "en" : "ar")} />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-accent selection:text-accent-foreground">
+      <Navbar />
 
-      <main data-build-release="it-operations-cv-2.0-bilingual">
+      <main data-build-release="it-operations-cv-2.0">
         {/* HERO SECTION */}
         <section id="home" className="relative min-h-screen flex items-center pt-20 pb-12 px-6 md:px-12 lg:px-24">
           <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05]"
@@ -61,13 +37,13 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
-              className={`hero-copy order-2 lg:order-1 flex flex-col ${language === "ar" ? "items-end text-right" : "items-start text-left"}`}
+              className="hero-copy order-2 lg:order-1 flex flex-col items-start text-left"
             >
               <motion.div variants={fadeInUp} className="inline-block px-3 py-1 mb-6 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium tracking-wide">
                 {t("Saudi Arabia")}
               </motion.div>
               <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold font-serif leading-tight mb-4 text-primary dark:text-foreground">
-                {language === "ar" ? <>فيصل<br />بالعبيد<span className="text-accent">.</span></> : <>Faisal<br />Balubead<span className="text-accent">.</span></>}
+                <>Faisal<br />Balubead<span className="text-accent">.</span></>
               </motion.h1>
               <motion.div variants={fadeInUp} className="h-1 w-20 bg-accent mb-6 rounded-full"></motion.div>
               <motion.h2 variants={fadeInUp} className="text-xl md:text-2xl font-light text-muted-foreground mb-8">
@@ -247,7 +223,7 @@ export default function Home() {
                     <Database size={20} />
                   </div>
                   <div>
-                    <div className="text-xs text-accent font-bold tracking-widest uppercase mb-1">{t("University Project")}</div>
+                    <div className="text-xs text-accent font-bold tracking-widest uppercase mb-1">{t("Managed IT Service Project")}</div>
                     <h3 className="font-bold text-lg leading-tight">{t("Taibah University Managed IT Services")}</h3>
                   </div>
                 </div>
@@ -421,11 +397,11 @@ export default function Home() {
                 <div className="space-y-4">
                   {[
                     { name: "ITIL® 4 Foundation — IT Service Management", org: "PeopleCert · September 2026", status: "Completed", url: "https://drive.google.com/file/d/1F1_YOt-6-wWCiDtihMsYlk6Zzs0SXEG7/view?usp=sharing" },
-                    { name: "Freelancing Practitioner Certificate", org: "Ministry of Human Resources and Social Development · Information Technology Systems", date: "Issued 08 October 2026 · Expires 08 October 2027", status: "Completed", url: `${import.meta.env.BASE_URL}Freelancing-Practitioner-Certificate-Redacted.pdf`, linkLabel: "View certificate" },
                     { name: "Windows Server Hybrid Administrator Associate (AZ-800, AZ-801)", org: "In Progress", status: "In Progress" },
                     { name: "Data Analysis Using Power BI", org: "Tawal Academy · February 2026", status: "Completed" },
                     { name: "SQL for Business Analysis", org: "Udemy · December 2025", status: "Completed" },
-                    { name: "Angular Development", org: "Tuwaiq Academy · July 2024", status: "Completed" }
+                    { name: "Angular Development", org: "Tuwaiq Academy · July 2024", status: "Completed" },
+                    { name: "Freelancing Practitioner Certificate", org: "Ministry of Human Resources and Social Development · Information Technology Systems", date: "Issued 08 October 2026 · Expires 08 October 2027", status: "Completed", url: `${import.meta.env.BASE_URL}Freelancing-Practitioner-Certificate-Redacted.pdf`, linkLabel: "View certificate" }
                   ].map((cert, idx) => (
                     <div key={idx} className="bg-card border border-border p-5 rounded-xl flex items-center justify-between group hover:border-accent/50 transition-colors">
                       <div>
