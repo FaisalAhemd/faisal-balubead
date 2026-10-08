@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -150,4 +150,50 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+html[lang="ar"] body,
+html[lang="ar"] button,
+html[lang="ar"] a {
+  font-family: "Noto Sans Arabic", Inter, sans-serif;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
+  font-family: "Noto Sans Arabic", sans-serif;
+}
+
+[dir="rtl"] .summary-accent {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .experience-timeline::before {
+  margin-left: 0;
+  margin-right: 1.25rem;
+}
+
+[dir="rtl"] .experience-card {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .cert-actions {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .education-gpa {
+  right: auto;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  [dir="rtl"] .experience-card {
+    margin-right: 0;
+  }
 }

@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react"
 import { Moon, Sun, Menu, X } from "lucide-react"
+import type { PortfolioLanguage } from "@/lib/portfolio-translations"
 
-export function Navbar() {
+type NavbarProps = {
+  language: PortfolioLanguage
+  onLanguageChange: () => void
+}
+
+export function Navbar({ language, onLanguageChange }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isDark, setIsDark] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const isArabic = language === "ar"
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -30,15 +37,25 @@ export function Navbar() {
   }
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Education", href: "#education" },
-    { name: "Contact", href: "#contact" },
+    { name: isArabic ? "نبذة عني" : "About", href: "#about" },
+    { name: isArabic ? "الخبرة العملية" : "Experience", href: "#experience" },
+    { name: isArabic ? "المهارات" : "Skills", href: "#skills" },
+    { name: isArabic ? "المشاريع" : "Projects", href: "#projects" },
+    { name: isArabic ? "التعليم" : "Education", href: "#education" },
+    { name: isArabic ? "التواصل" : "Contact", href: "#contact" },
   ]
 
   const closeMobileMenu = () => setMobileMenuOpen(false)
+  const languageButton = (
+    <button
+      onClick={onLanguageChange}
+      className="px-2 py-1 rounded-md text-sm font-semibold text-foreground/80 hover:text-accent hover:bg-muted transition-colors"
+      aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}
+      title={isArabic ? "Switch to English" : "التبديل إلى العربية"}
+    >
+      {isArabic ? "English" : "العربية"}
+    </button>
+  )
 
   return (
     <header
@@ -64,6 +81,7 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
+          {languageButton}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-muted transition-colors text-foreground/80 hover:text-foreground"
@@ -75,6 +93,7 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="md:hidden flex items-center gap-4">
+          {languageButton}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-muted transition-colors text-foreground/80"
